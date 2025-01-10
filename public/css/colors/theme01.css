@@ -1,0 +1,291 @@
+.theme-bg, 
+.bg-gradient, 
+.home-bg, 
+.btn-gradient, 
+.bg-features, 
+.work_process .work_box .work_left::after,
+.work_process .work_box .work_right::after, 
+.pricing-item.active .pricing-header:before, 
+.pricing-item .pricing-footer a, 
+.welcome-area .right-bg:before, 
+.single-service::before, 
+.custom-nav.sticky-header .sign_btn, 
+.gradiant-bg, 
+.featured-block-top .feature-inner .upper-box .icon-outer .icon, 
+.section-breadcrumb, 
+.features-main-block .features-ico, 
+.section.portfolio .filters ul li:after, 
+.p-desc, 
+.btn-search:hover, 
+.portfolio-section .filters ul li:after {
+    background-image: url('../../images/bg-portada-1.jpg');
+    background-color: rgba(8, 75, 43, 0.7); /* Fondo con transparencia */
+    background-blend-mode: multiply; /* Opcional para mezcla */
+}
+
+.footer {
+    background-color: rgba(8, 75, 43, 1); /* Fondo con transparencia */
+}
+
+.section_title_icon,
+.btn-gradient:hover,
+.btn-gradient:focus,
+.btn-gradient:active,
+.btn-gradient.active,
+.btn-gradient.focus,
+.btn-gradient:active,
+.btn-gradient:focus,
+.btn-gradient:hover,
+.open > .dropdown-toggle.btn-gradient, 
+.work_process .work_box .work_left::after,
+.work_process .work_box .work_right::after, 
+.pricing-item.active .pricing-header:before,
+.pricing-item .pricing-footer a:hover, 
+.footer .fot_social .social-icon:hover, 
+.pricing-item:hover .pricing-header::before, 
+.btn-white:hover, 
+.custom-nav.sticky-header .sign_btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.contact-menu-list i, 
+.section.portfolio .filters ul li.active, 
+.section.portfolio .filters ul li:hover, 
+.section.portfolio .filters ul li:focus {
+    color: rgba(8, 75, 43, 0.8); /* Color con 80% de opacidad */
+}
+
+/* General del navbar */
+/* Estilo general del navbar */
+.navbar-inner {
+    background-color: #062e16; /* Verde oscuro */
+    transition: background-color 0.3s ease;
+    padding: 5px 0; /* Más espacio para altura */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Blanco */
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+    border-top: 2px solid transparent; /* Línea superior transparente */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #a8d5b3; /* Verde claro */
+    border-top: 2px solid #ffffff; /* Línea blanca superior */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #a8d5b3; /* Verde claro */
+    border-top: 2px solid #ffffff; /* Línea blanca superior */
+}
+
+/* Solución para mantener el color al hacer focus en móviles */
+.navbar-nav .nav-link:focus {
+    color: #a8d5b3 !important; /* Verde claro */
+    background-color: transparent !important; /* Evita el fondo blanco */
+    border-top: 2px solid #ffffff !important; /* Línea blanca superior */
+}
+
+/* Botón de contacto */
+.contact_btn .btn {
+    background-color: #062e16; /* Verde oscuro */
+    color: #ffffff; /* Blanco */
+    border: 1px solid #ffffff; /* Borde blanco */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 8px 20px;
+}
+
+.contact_btn .btn:hover {
+    background-color: #a8d5b3; /* Verde claro */
+    color: #062e16; /* Verde oscuro */
+}
+
+/* Botón del menú móvil */
+.navbar-toggler {
+    color: #ffffff; /* Blanco */
+    border: none; /* Sin borde */
+    margin-top: 5px; /* Ajuste de posición */
+    position: relative;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-toggler i {
+    font-size: 24px;
+}
+
+/* Dropdown del menú móvil */
+.navbar-collapse {
+    background-color: #062e16; /* Verde oscuro */
+    padding-top: 10px;
+    z-index: 1050; /* Asegura que esté sobre otros elementos */
+}
+
+.navbar-collapse .nav-link {
+    color: #ffffff; /* Blanco */
+    padding: 15px 20px; /* Más espacio para mejor visibilidad */
+    text-align: center; /* Centra el texto */
+}
+
+.navbar-collapse .nav-link:hover {
+    background-color: #084b2b; /* Verde más intenso */
+    color: #ffffff; /* Blanco */
+}
+
+/* Estilo responsivo para pantallas medianas */
+@media (max-width: 991px) {
+    .custom-nav {
+        background-color: #062e16 !important; /* Verde oscuro */
+        padding: 10px 0 !important;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .contact_btn {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .contact_btn .btn {
+        width: 100%;
+    }
+}
+
+/* Estilo específico para pantallas pequeñas */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        max-width: 120px; /* Tamaño reducido del logo */
+    }
+
+    .navbar-toggler i {
+        font-size: 20px; /* Ícono del menú más pequeño */
+    }
+
+    .navbar-collapse {
+        margin-top: 15px; /* Añade espacio entre el menú y el resto */
+    }
+}
+
+/* Mantener colores al hacer scroll */
+.navbar.scrolled {
+    background-color: #062e16 !important; /* Verde oscuro */
+    box-shadow: none; /* Sin sombra (opcional, ajusta según tus necesidades) */
+}
+
+.navbar.scrolled .nav-link {
+    color: #ffffff !important; /* Asegura que el texto permanezca blanco */
+}
+
+.navbar.scrolled .contact_btn .btn {
+    color: #ffffff !important; /* Mantiene el texto blanco del botón */
+    background-color: #062e16 !important; /* Fondo verde oscuro */
+    border: 1px solid #ffffff !important; /* Borde blanco */
+}
+
+.navbar.scrolled .contact_btn .btn:hover {
+    background-color: #a8d5b3 !important; /* Fondo verde claro */
+    color: #062e16 !important; /* Texto verde oscuro */
+}
+
+/* Estilo para el logo */
+.navbar-brand img {
+    max-width: 80px !important; /* Ajusta el tamaño deseado */
+    height: auto !important; /* Mantén las proporciones de la imagen */
+}
+
+.navbar-brand {
+    display: flex; /* Asegura alineación correcta */
+    align-items: center; /* Centra verticalmente si es necesario */
+    padding: 0; /* Elimina cualquier relleno que pueda afectar */
+}
+
+/* Estilos generales para la sección */
+#secretary-general {
+    padding: 60px 15px; /* Espaciado interno */
+}
+
+/* Estilos para la imagen */
+#secretary-general img {
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Estilos para el subtítulo */
+#secretary-general .subtitle {
+    color: #777;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Estilos para el título */
+#secretary-general .title {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Estilos para el párrafo de contenido */
+#secretary-general .content p {
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Estilos para el nombre */
+#secretary-general .font-italic {
+    font-size: 1.2rem;
+    color: #222;
+}
+
+/* Estilos para el rol debajo del nombre */
+#secretary-general .small {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: -5px;
+}
+
+.directors-slider .director-card {
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.directors-slider .director-card:hover {
+    transform: translateY(-10px);
+}
+
+.directors-slider img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.directors-slider h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.directors-slider p {
+    color: #777;
+    font-size: 0.9rem;
+}
+

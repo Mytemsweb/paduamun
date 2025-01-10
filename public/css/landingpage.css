@@ -1,0 +1,37 @@
+/*==========================
+        20.LANDING PAGE
+============================*/
+.theme-bg {
+	background:#265BFB;
+}
+.landing-wrapper .logo-light {
+	height: 50px;
+}
+
+.landing-wrapper {
+	padding: 70px 0;
+}
+
+.section {
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #fff;
+}
+.pages-img-box {
+	padding: 20px 0 30px 0;
+	text-align: center;
+}
+
+	.pages-img-box a {
+		border: 15px solid #f2f2f2;
+		display: block;
+		-webkit-transition: all 400ms ease-in-out;
+		-moz-transition: all 400ms ease-in-out;
+		-o-transition: all 400ms ease-in-out;
+		transition: all 400ms ease-in-out;
+	}
+.footer p {
+	color: #fff;
+	font-size:14px;
+}
