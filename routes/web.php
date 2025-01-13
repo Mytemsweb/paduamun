@@ -18,4 +18,8 @@ use App\Http\Controllers\CommitteeController;
 
 Route::get('/', [InitController::class, 'index'])->name('init');
 Route::get('/aboutus', [AboutUsController::class, 'index'])->name('about_us');
-Route::get('/committees', [CommitteeController::class, 'index'])->name('committees');
+
+Route::controller(CommitteeController::class)->prefix('committees')->group(function() {
+    Route::get('/'                    , 'index')->name('committees');
+    Route::post('/get-committee'      , 'get_committ')->name('get_committee');
+});

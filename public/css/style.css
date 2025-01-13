@@ -2311,3 +2311,112 @@ canvas {
     font-weight: bold; /* Texto en negrita */
     transition: all 0.3s ease; /* Animación suave */
 }
+
+/* Estilo general del modal */
+#committeeModal .modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo del encabezado */
+#committeeModal .modal-header {
+    background-color: #1b5e20; /* Color verde */
+    color: #fff; /* Texto blanco */
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+}
+
+#committeeModal .modal-header .close {
+    color: #fff;
+    opacity: 1;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+#committeeModal .modal-header .close:hover {
+    color: #f1f1f1;
+}
+
+/* Estilo del cuerpo */
+#committeeModal .modal-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+#committeeModal #committeeImage {
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#committeeModal #committeeTitle {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #1b5e20;
+    text-align: center;
+}
+
+#committeeModal #committeeTheme {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #6c757d; /* Texto gris */
+    text-align: center;
+}
+
+/* Detalles adicionales (director y tipo) */
+#committeeModal p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #343a40;
+    text-align: center;
+}
+
+#committeeModal p strong {
+    color: #1b5e20; /* Texto verde */
+}
+
+/* Botón de descarga */
+#committeeModal #downloadGuide {
+    background-color: #1b5e20;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+    line-height: 1.8;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#committeeModal #downloadGuide:hover {
+    background-color: #146414;
+    transform: scale(1.05);
+}
+
+/* Estilo del pie del modal */
+#committeeModal .modal-footer {
+    background-color: #f8f9fa; /* Fondo claro */
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    justify-content: flex-end; /* Alinear Close a la derecha */
+    padding: 1rem 2rem;
+}
+
+#committeeModal .modal-footer .btn {
+    border-radius: 20px;
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+    line-height: 1.2;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#committeeModal .modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+#committeeModal .modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
