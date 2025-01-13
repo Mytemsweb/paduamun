@@ -39,7 +39,7 @@
 ========================*/
 
 body {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
     font-weight: 400;
     background-color: #fff;
@@ -528,8 +528,15 @@ button:focus {
 
 .home-bg .heading {
     color: #fff;
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.committees-bg .heading {
+    color: #fff;
+    font-size: 50px;
+    line-height: 50px;
     margin-bottom: 15px;
 }
 
@@ -2266,4 +2273,41 @@ canvas {
     .package-box .package-box-inner {
         padding: 50px 25px;
     }
+}
+
+.btn-home {
+    font-size: 14px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    padding: 0 20px; /* Ajusta el valor aquí para más espacio */
+    font-weight: 600;
+    border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* .btn-home:hover {
+    background-color: #f0f0f0;
+    color: #333;
+} */
+
+.img-fluid-images{max-width:100%;height:auto}
+/* Ajustar el botón para ocupar casi todo el ancho */
+
+.card-body-committess {
+    background-color: #f1f1f1; /* Fondo gris claro para resaltar el botón */
+    padding: 20px; /* Espaciado interno */
+    border-top: 2px solid #1b5e20; /* Línea superior verde */
+}
+.btn-view-more {
+    display: block; /* Lo convierte en un elemento de bloque */
+    width: 90%; /* Ocupa el 90% del ancho del contenedor */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+    background-color: #1b5e20; /* Verde oscuro */
+    border: 2px solid #ffffff; /* Borde blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    transition: all 0.3s ease; /* Animación suave */
 }

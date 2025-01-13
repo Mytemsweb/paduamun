@@ -128,26 +128,26 @@ $(document).ready(function () {
         });
     }
 /*----ISOTOP JS-----*/
-    var length = $('.portfolio-section').length;
-    if (length >= 1) {
-        $('.filters ul li').click(function () {
-            $('.filters ul li').removeClass('active');
-            $(this).addClass('active');
+var length = $('.portfolio-section').length;
+if (length >= 1) {
+    $('.filters ul li').click(function () {
+        $('.filters ul li').removeClass('active');
+        $(this).addClass('active');
 
-            var data = $(this).attr('data-filter');
-            $grid.isotope({
-                filter: data
-            })
-        });
+        var data = $(this).attr('data-filter');
+        $grid.isotope({
+            filter: data
+        })
+    });
 
-        var $grid = $(".grid").isotope({
-            itemSelector: ".all",
-            percentPosition: true,
-            masonry: {
-                columnWidth: ".all"
-            }
-        });
-    }
+    var $grid = $(".grid").isotope({
+        itemSelector: ".all",
+        percentPosition: true,
+        masonry: {
+            columnWidth: ".all"
+        }
+    });
+}
     /*----ACCORDIAN JS-----*/
     (function ($) {
         $(".question-card").click(function () {
@@ -197,21 +197,10 @@ $(document).ready(function () {
 /*----ONSCROLL JS-----*/
 $(window).on("scroll", function () {
     "use strict";
-    var sections = $('section'),
-        nav = $('.navbar-nav'),
-        nav_height = nav.outerHeight() + 25;
-    $(window).scrollTop() >= 20 ? $("nav").addClass("sticky-header") : $(".sticky").removeClass("sticky-header");
-    /*----ON SCROLL CHANGE ACTIVE MENU-----*/
-    var cur_pos = $(this).scrollTop();
-    sections.each(function () {
-        var top = $(this).offset().top - nav_height,
-            bottom = top + $(this).outerHeight();
-        if (cur_pos >= top && cur_pos <= bottom) {
-            nav.find('li').removeClass('active');
-            $(this).addClass('active');
-            nav.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass('active');
-        }
-    });
+
+    // Sticky header al hacer scroll
+
+    // Elimina la lógica que afecta las clases "active" basadas en el scroll
 }), $(".onepage-links .nav-item a").on("click", function (o) {
     var t = $(this);
     $('.nav-item').removeClass('active');

@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InitController;
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\CommitteeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('init');
-});
+Route::get('/', [InitController::class, 'index'])->name('init');
+Route::get('/aboutus', [AboutUsController::class, 'index'])->name('about_us');
+Route::get('/committees', [CommitteeController::class, 'index'])->name('committees');

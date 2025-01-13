@@ -23,6 +23,31 @@
     background-blend-mode: multiply; /* Opcional para mezcla */
 }
 
+.committees-bg, 
+.bg-gradient, 
+.home-bg, 
+.btn-gradient, 
+.bg-features, 
+.work_process .work_box .work_left::after,
+.work_process .work_box .work_right::after, 
+.pricing-item.active .pricing-header:before, 
+.pricing-item .pricing-footer a, 
+.welcome-area .right-bg:before, 
+.single-service::before, 
+.custom-nav.sticky-header .sign_btn, 
+.gradiant-bg, 
+.featured-block-top .feature-inner .upper-box .icon-outer .icon, 
+.section-breadcrumb, 
+.features-main-block .features-ico, 
+.section.portfolio .filters ul li:after, 
+.p-desc, 
+.btn-search:hover, 
+.portfolio-section .filters ul li:after {
+    background-image: url('../../images/bg-portada-committe.jpg');
+    background-color: rgba(8, 75, 43, 0.7); /* Fondo con transparencia */
+    background-blend-mode: multiply; /* Opcional para mezcla */
+}
+
 .footer {
     background-color: rgba(8, 75, 43, 1); /* Fondo con transparencia */
 }
@@ -61,7 +86,7 @@
 .navbar-inner {
     background-color: #062e16; /* Verde oscuro */
     transition: background-color 0.3s ease;
-    padding: 5px 0; /* Más espacio para altura */
+    /* padding: 5px 0; */ /* Más espacio para altura */
 }
 
 .navbar-nav .nav-link {
