@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InitController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\CommitteeController;
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,8 @@ Route::get('/aboutus', [AboutUsController::class, 'index'])->name('about_us');
 Route::controller(CommitteeController::class)->prefix('committees')->group(function() {
     Route::get('/'                    , 'index')->name('committees');
     Route::post('/get-committee'      , 'get_committ')->name('get_committee');
+});
+
+Route::controller(GalleryController::class)->prefix('gallery')->group(function() {
+    Route::get('/'                    , 'index')->name('gallery');
 });

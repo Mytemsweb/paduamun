@@ -15,6 +15,7 @@
     <!-- Material Icon -->
     <link rel="stylesheet" href="{{ asset('css/materialdesignicons.min.css') }}">
     <!-- Carousel Slider -->
+    <link rel='stylesheet' href='{{ asset('css/magnific-popup.min.css') }}'>
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <!-- Google Fonts -->
     <link rel="stylesheet" href="{{ asset('css/css?family=Source+Sans+Pro:400,600,700&display=swap') }}" type="text/css">
@@ -46,8 +47,8 @@
                         <a href="{{ route('committees') }}" class="nav-link">Comittees</a>
                     </li>
                    
-                    <li class="nav-item">
-                        <a href="blog.html" class="nav-link">Gallery</a>
+                    <li class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
+                        <a href="{{ route('gallery') }}" class="nav-link">Gallery</a>
                     </li>
                 </ul>
             </div>
@@ -589,6 +590,8 @@
     <script src="{{ asset('js/parallax.js') }}"></script>
     <script src="{{ asset('js/wow.min.js') }}"></script>
     <script src="{{ asset('js/particles.js') }}"></script>
+    <script src='{{ asset('js/jquery.magnific-popup.min.js') }}'></script>
+	<script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>	
     <!-- Main Js   -->
     <script src="{{ asset('js/main.js') }}"></script>
     <script>

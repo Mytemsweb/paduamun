@@ -112,7 +112,9 @@ class CommitteeController extends Controller
         if (!$committee) {
             return response()->json(['status' => false]);
         }
-        
+
+        /* $committee['guide_url'] = route('download_guide', ['id' => $committee['id']]); */
+
         return response()->json([
             'status' => true,
             'data'   => $committee
