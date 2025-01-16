@@ -24,6 +24,7 @@
     <!-- Custom  CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/colors/theme01.css') }}" id="option-color">
+    @yield('styles')
 </head>
 
 <body>

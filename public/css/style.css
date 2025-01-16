@@ -1589,7 +1589,6 @@ canvas {
 }
 
     .portfolio-section .filters ul li:after {
-        content: "";
         display: block;
         width: 0;
         bottom: 7px;

@@ -1,13 +1,82 @@
 @extends('layout')
+@section('styles')
+<style>
+    body {
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f9f9f9;
+        margin: 0;
+    }
+
+    .filters {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .filters ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .filters li {
+        padding: 10px 20px;
+        margin: 0 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 22px;
+    }
+
+    .filters li.active {
+        background-color: #004d26;
+        color: #fff;
+        border-color: #004d26;
+    }
+
+    .filters li:hover {
+        background-color: #004d26;
+        color: #fff;
+        border-color: #004d26;
+    }
+
+    .highlight {
+        background-color: #004d26;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: inline-block;
+        font-weight: bold;
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 20px;
+    }
+
+    .title span {
+        font-size: 18px;
+    }
+</style>
+
+@endsection
 @section('content')
 <section class="section portfolio-section grid-col-4 active mt-5">
     <div class="container mt-5"> 
         <div class="filters text-center wow fadeInUp mt-5" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInUp;">
             <ul class="p-0 list-unstyled d-flex align-items-center justify-content-center">
-                <li class="py-3 mx-3 active" data-filter="*">All</li>
-                <li class="py-3 mx-3" data-filter=".first-edition">1st Edition</li>
+                <li class="py-3 mx-3 active" data-filter=".first-edition">1st Edition</li>
+                <li class="py-3 mx-3" data-filter=".last-year">2024 Conferences</li>
                 <li class="py-3 mx-3" data-filter=".munners">Munners</li>
-                <li class="py-3 mx-3" data-filter=".last-year">Last Year</li>
             </ul>
         </div>
 
@@ -61,6 +130,9 @@
 @endsection
 @section('scripts')
     <script>
-        
+        $(document).ready(function() {
+            // Simula el clic en el filtro ".first-edition" al cargar la página
+            $('li[data-filter=".first-edition"]').click();
+        });
     </script>
 @endsection
