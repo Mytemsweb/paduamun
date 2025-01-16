@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\InitController;
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\InitController;
 use App\Http\Controllers\CommitteeController;
 use App\Http\Controllers\GalleryController;
 
@@ -27,4 +28,8 @@ Route::controller(CommitteeController::class)->prefix('committees')->group(funct
 
 Route::controller(GalleryController::class)->prefix('gallery')->group(function() {
     Route::get('/'                    , 'index')->name('gallery');
+});
+
+Route::controller(ContactController::class)->prefix('contact')->group(function() {
+    Route::get('/'                    , 'index')->name('contact');
 });

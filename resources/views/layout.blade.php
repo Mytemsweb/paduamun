@@ -54,7 +54,7 @@
                 </ul>
             </div>
             <div class="contact_btn">
-                <a href="contactus.html" class="btn btn-sm">CONTACT US</a>
+                <a href="{{ route('contact') }}" class="btn btn-sm">CONTACT US</a>
                 <button class="navbar-toggler ml-2 p-0" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="mdi mdi-menu"></i>
                 </button>
