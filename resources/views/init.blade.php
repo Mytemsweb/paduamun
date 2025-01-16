@@ -84,6 +84,20 @@
         </div>
     </section>
     
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px; /* Altura definida para el contenedor */
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    
     <section class="section_directors">
         <div class="container">
             <div class="row">
@@ -96,40 +110,113 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="owl-carousel owl-theme showcase-slider wow fadeIn" data-wow-duration="1000ms">
-                        <!-- Primera tarjeta -->
+                        <!-- Tarjetas -->
                         <div class="item">
                             <div class="showcase-card text-center border rounded shadow-sm p-3">
-                                <!-- Imagen -->
-                                <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
-                                    alt="Placeholder" 
-                                    class="img-fluid rounded mb-3">
-                                <!-- Nombre -->
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Fabiana Delgadillo">
+                                </div>
+                                <h4 class="fw-bold mb-1">Fabiana Delgadillo</h4>
+                                <p class="text-muted small mb-0">TPA Director</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="showcase-card text-center border rounded shadow-sm p-3">
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Alessandra Cáceres">
+                                </div>
+                                <h4 class="fw-bold mb-1">Alessandra Cáceres</h4>
+                                <p class="text-muted small mb-0">UN-HABITAT Director</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="showcase-card text-center border rounded shadow-sm p-3">
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Lorenzo Saldivar">
+                                </div>
                                 <h4 class="fw-bold mb-1">Lorenzo Saldivar</h4>
-                                <!-- Cargo -->
                                 <p class="text-muted small mb-0">CRISIS Director</p>
                             </div>
                         </div>
-            
-                        <!-- Segunda tarjeta -->
                         <div class="item">
                             <div class="showcase-card text-center border rounded shadow-sm p-3">
-                                <!-- Imagen -->
-                                <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
-                                    alt="Placeholder" 
-                                    class="img-fluid rounded mb-3">
-                                <!-- Nombre -->
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Sandro Rodriguez">
+                                </div>
+                                <h4 class="fw-bold mb-1">Sandro Rodriguez</h4>
+                                <p class="text-muted small mb-0">ECOSOC Director</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="showcase-card text-center border rounded shadow-sm p-3">
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Sofia Vargas">
+                                </div>
+                                <h4 class="fw-bold mb-1">Sofia Vargas</h4>
+                                <p class="text-muted small mb-0">SOCHUM Director</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="showcase-card text-center border rounded shadow-sm p-3">
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Micaela Fuertes">
+                                </div>
+                                <h4 class="fw-bold mb-1">Micaela Fuertes</h4>
+                                <p class="text-muted small mb-0">CSW Director</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="showcase-card text-center border rounded shadow-sm p-3">
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Bruno Bambarén">
+                                </div>
+                                <h4 class="fw-bold mb-1">Bruno Bambarén</h4>
+                                <p class="text-muted small mb-0">UNEP Director</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="showcase-card text-center border rounded shadow-sm p-3">
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Alessandra Linares">
+                                </div>
+                                <h4 class="fw-bold mb-1">Alessandra Linares</h4>
+                                <p class="text-muted small mb-0">UNICEF Director</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="showcase-card text-center border rounded shadow-sm p-3">
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Sandro Ratti">
+                                </div>
+                                <h4 class="fw-bold mb-1">Sandro Ratti</h4>
+                                <p class="text-muted small mb-0">OMS Director</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="showcase-card text-center border rounded shadow-sm p-3">
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Valentina Baldini">
+                                </div>
                                 <h4 class="fw-bold mb-1">Valentina Baldini</h4>
-                                <!-- Cargo -->
                                 <p class="text-muted small mb-0">ILO Director</p>
                             </div>
                         </div>
-            
-                        <!-- Agregar más tarjetas -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section class="section bg-light">
         <div class="container">
@@ -181,71 +268,55 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="owl-carousel owl-theme showcase-slider wow fadeIn" data-wow-duration="1000ms">
-                        <!-- Primera tarjeta -->
+                        <!-- Tarjetas -->
                         <div class="item">
                             <div class="showcase-card text-center border rounded shadow-sm p-3">
-                                <!-- Imagen -->
-                                <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
-                                    alt="Placeholder" 
-                                    class="img-fluid rounded mb-3">
-                                <!-- Nombre -->
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Mikelly Rodriguez" 
+                                        class="img-fluid rounded mb-3">
+                                </div>
                                 <h4 class="fw-bold mb-1">Mikelly Rodriguez</h4>
-                                <!-- Cargo -->
-                                <p class="text-muted small mb-0">Under Secretary-General</p>
+                                <p class="text-muted small mb-0">Under-Secretary General</p>
                             </div>
                         </div>
-            
-                        <!-- Segunda tarjeta -->
                         <div class="item">
                             <div class="showcase-card text-center border rounded shadow-sm p-3">
-                                <!-- Imagen -->
-                                <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
-                                    alt="Placeholder" 
-                                    class="img-fluid rounded mb-3">
-                                <!-- Nombre -->
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Paris Alban" 
+                                        class="img-fluid rounded mb-3">
+                                </div>
                                 <h4 class="fw-bold mb-1">Paris Alban</h4>
-                                <!-- Cargo -->
                                 <p class="text-muted small mb-0">Head of Materials</p>
                             </div>
                         </div>
-            
-                        <!-- Agregar más tarjetas -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section-features">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Contenido al lado derecho -->
-                <div class="col-lg-12">
-                    <div class="section-title text-center mb-4">
-                        <h2 class="font-weight-bold" style="border-bottom: 5px solid #0a3b23; display: inline;">Partners</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="features-main-block">
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="mt-30 features-square wow fadeInUp" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInUp;">
-                            <div class="text-center">
-                                <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" class="img-fluid" alt="Brand 1">
+                        <div class="item">
+                            <div class="showcase-card text-center border rounded shadow-sm p-3">
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Pamela Guevara" 
+                                        class="img-fluid rounded mb-3">
+                                </div>
+                                <h4 class="fw-bold mb-1">Pamela Guevara</h4>
+                                <p class="text-muted small mb-0">Head of Logistics</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="mt-30 features-square wow fadeInUp" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInUp;">
-                            <div class="text-center">
-                                <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" class="img-fluid" alt="Brand 2">
+                        <div class="item">
+                            <div class="showcase-card text-center border rounded shadow-sm p-3">
+                                <div class="image-container">
+                                    <img src="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150' style='background:gray'><rect width='200' height='150' fill='gray'/></svg>" 
+                                        alt="Astrid Cuti" 
+                                        class="img-fluid rounded mb-3">
+                                </div>
+                                <h4 class="fw-bold mb-1">Astrid Cuti</h4>
+                                <p class="text-muted small mb-0">Head of Marketing</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
         </div>
     </section>
+    
 @endsection

@@ -35,68 +35,55 @@
 
 <section class="section section-features">
     <div class="container">
-        <div class="mb-3 wow fadeInUp" data-wow-duration="1.5s"
-            style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInUp;">
+        <div class="mb-3 wow fadeInUp" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInUp;">
             <p class="text-justify">
-                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type <b>specimen book</b>.
+                During MUN delegates take on the roles of different countries (or occasionally specific figures) in committees that mimic the workings of the United Nations. To get a brief overview of each topic, simply <b>hover over the 'view more' button of the respective committee</b>. For the best experience, it's recommended to use a computer.
             </p>
         </div>
-
-        <div class="row">
-            <!-- Repite este bloque para cada tarjeta -->
+    
+        <div class="row justify-content-center">
             @foreach ($committees as $item)
-            <div class="col-md-6 mb-4">
-                <div class="card text-center">
-                    <img src="{{ asset('images/committees/' . $item["imagen"]) }}" class="card-img-top" alt="Image Description">
-                    <div class="card-body card-body-committess">
-                        <a href="#" class="btn-home btn-success btn-rounded text-white btn-view-more" data-id="{{ $item["id"] }}"> &nbsp; View More &nbsp;</a>
+            <div class="col-md-6 col-lg-6 mb-4">
+                <div class="card committee-card text-center">
+                    <div class="card-image">
+                        <img src="{{ asset('images/committees/' . $item['imagen']) }}" class="img-fluid" alt="{{ $item['committee'] }}">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{ $item['committee'] }}</h3>
+                        <p class="card-text">{{ $item['theme'] }}</p>
+                        <a href="#" class="btn-view-more" data-id="{{ $item['id'] }}">View More</a>
                     </div>
                 </div>
             </div>
             @endforeach
-            <!-- Repite hasta completar las 10 tarjetas -->
         </div>
-
-        <!-- Modal -->
-        
-
     </div>
 
     <div class="modal fade" id="committeeModal" tabindex="-1" role="dialog" aria-labelledby="committeeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content shadow-lg border-0">
-                <!-- Modal Header -->
-                <div class="modal-header text-white" style="background-color: #1b5e20;">
-                    <h5 class="modal-title font-weight-bold" id="committeeModalLabel">Committee Details</h5>
-                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <div class="modal-content">
+                <!-- Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <!-- Modal Body -->
-                <div class="modal-body text-center p-4">
-                    <!-- Imagen del Comité -->
-                    <img id="committeeImage" src="" class="img-fluid mb-3 rounded shadow-sm" alt="Committee Image">
-                    <!-- Título del Comité -->
-                    <h4 id="committeeTitle" class="text-center mb-3 font-weight-bold text-success"></h4>
-                    <!-- Tema del Comité -->
-                    <p id="committeeTheme" class="text-center text-secondary mb-3"></p>
-                    <!-- Detalles -->
-                    <div class="row justify-content-center">
-                        <div class="col-md-5">
-                            <p class="mb-2"><strong>Director:</strong> <span id="committeeDirector" class="text-dark"></span></p>
-                        </div>
-                        <div class="col-md-5">
-                            <p class="mb-2"><strong>Type:</strong> <span id="committeeType" class="text-dark"></span></p>
-                        </div>
-                    </div>
-                    <!-- Botón de descarga -->
-                    <div class="text-center mt-4">
-                        <a id="downloadGuide" href="#" class="btn btn-success px-4 py-2 shadow">Download Study Guide</a>
-                    </div>
-                </div>
-                <!-- Modal Footer -->
-                <div class="modal-footer bg-light border-0">
-                    <button type="button" class="btn btn-secondary px-4 py-2 shadow" data-dismiss="modal">Close</button>
+                <!-- Body -->
+                <div class="modal-body text-center">
+                    <!-- Título del comité -->
+                    <h3 id="committeeTitle" class="mb-4" style="color: #0a3b23;"></h3>
+                    <!-- Imagen -->
+                    <img id="committeeImage" src="" class="img-fluid mb-4" alt="Committee Image" style="border-radius: 20%; width: 100%; height: auto;">
+
+<!-- Nombres con fondo verde -->
+<div class="directors mb-3" style="display: flex; justify-content: center; gap: 10px;">
+    <strong id="director_01" style="background-color: #117244; color: #fff; padding: 0.5rem 1rem; border-radius: 20px; font-size: 1rem;">Director 1</strong>
+    <strong id="director_02" style="background-color: #117244; color: #fff; padding: 0.5rem 1rem; border-radius: 20px; font-size: 1rem;">Director 2</strong>
+</div>
+                    <!-- Tema -->
+                    <p id="committeeTheme" class="theme mb-4"></p>
+                    <!-- Botón -->
+                    <a id="downloadGuide" href="#" class="btn btn-success">Download Study Guide</a>
                 </div>
             </div>
         </div>
@@ -106,13 +93,13 @@
 @endsection
 @section('scripts')
     <script>
-        $('body').on('click', '.btn-view-more', function(event) {
+       $('body').on('click', '.btn-view-more', function(event) {
     event.preventDefault();
     let id = $(this).data('id');
     
     // Realiza la petición AJAX
     $.ajax({
-        url: "{{ route('get_committee') }}", // Asegúrate de que esta ruta esté configurada en web.php
+        url: "{{ route('get_committee') }}",
         method: "POST",
         data: {
             '_token': "{{ csrf_token() }}",
@@ -125,12 +112,12 @@
             }
 
             // Rellenar los datos del modal
+            $('#committeeTitle').text(response.data.committee); // Título dentro del contenido del modal
             $('#committeeImage').attr('src', "{{ asset('images/committees/') }}/" + response.data.imagen);
-            $('#committeeTitle').text(response.data.committee);
+            $('#director_01').text(response.data.director_01);
+            $('#director_02').text(response.data.director_02);
             $('#committeeTheme').text(response.data.theme);
-            $('#committeeDirector').text(response.data.director);
-            $('#committeeType').text(response.data.type);
-            $('#downloadGuide').attr('href', response.data.guide_url); // Si tienes una URL de guía
+            $('#downloadGuide').attr('href', response.data.guide_url || '#');
 
             // Mostrar el modal
             $('#committeeModal').modal('show');
@@ -141,6 +128,9 @@
         dataType: "json"
     });
 });
+
+
+
 
     </script>
 @endsection

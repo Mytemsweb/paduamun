@@ -570,7 +570,6 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <ul class="fot_social list-inline mt-4">
-                        <li class="list-inline-item"><a href="#" class="social-icon"><i class="mdi mdi-facebook"></i></a></li>
                         <li class="list-inline-item"><a href="#" class="social-icon"><i class="mdi mdi-instagram"></i></a></li>
                     </ul>
                 </div>

@@ -377,9 +377,9 @@ button:focus {
     .custom-nav .navbar-nav li a {
         position: relative;
         color: rgba(255, 255, 255, 0.6);
-        font-size: 16px;
+        font-size: 22px;
         font-weight: 600;
-        padding: 6px 16px !important;
+        padding: 6px 13px !important;
         margin: 0 3px;
     }
 
@@ -2296,127 +2296,141 @@ canvas {
 .img-fluid-images{max-width:100%;height:auto}
 /* Ajustar el botón para ocupar casi todo el ancho */
 
-.card-body-committess {
-    background-color: #f1f1f1; /* Fondo gris claro para resaltar el botón */
-    padding: 20px; /* Espaciado interno */
-    border-top: 2px solid #1b5e20; /* Línea superior verde */
+
+
+.committee-card {
+    background-color: #117244; /* Fondo verde oscuro */
+    color: white; /* Texto blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card.committee-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el contenido uniformemente */
+    height: 100%;
+    min-height: 300px; /* Ajusta esta altura según sea necesario */
+}
+
+.committee-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al pasar el mouse */
+}
+
+.card-image {
+    padding: 10px; /* Espacio alrededor de la imagen */
+    text-align: center; /* Centra la imagen horizontalmente */
+}
+
+.card-image img {
+    max-width: 100%; /* La imagen nunca excede el ancho de su contenedor */
+    height: auto; /* Mantiene la proporción original */
+    object-fit: contain; /* Evita recortes de la imagen */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+}
+
+
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
 .btn-view-more {
-    display: block; /* Lo convierte en un elemento de bloque */
-    width: 90%; /* Ocupa el 90% del ancho del contenedor */
-    margin: 0 auto; /* Centra el botón horizontalmente */
-    background-color: #1b5e20; /* Verde oscuro */
-    border: 2px solid #ffffff; /* Borde blanco */
-    border-radius: 5px; /* Bordes redondeados */
-    font-weight: bold; /* Texto en negrita */
-    transition: all 0.3s ease; /* Animación suave */
+    display: inline-block;
+    background-color: #084b2b; /* Botón verde oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #084b2b; /* Borde del mismo color que el fondo */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.btn-view-more:hover {
+    background-color: #ffffff; /* Botón blanco al pasar el mouse */
+    color: #084b2b; /* Texto verde oscuro */
+    border: 2px solid #ffffff; /* Borde blanco */
+}
+
+
+
 
 /* Estilo general del modal */
 #committeeModal .modal-content {
-    border-radius: 12px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     border: none;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo del encabezado */
 #committeeModal .modal-header {
-    background-color: #1b5e20; /* Color verde */
-    color: #fff; /* Texto blanco */
-    border-bottom: none;
-    border-radius: 12px 12px 0 0;
+    background-color: #1b5e20;
+    color: #fff;
+    padding: 1.5rem;
+    justify-content: space-between;
 }
 
 #committeeModal .modal-header .close {
-    color: #fff;
-    opacity: 1;
     font-size: 1.5rem;
-    transition: color 0.3s ease;
+    color: #fff;
+    opacity: 0.8;
 }
 
 #committeeModal .modal-header .close:hover {
-    color: #f1f1f1;
+    opacity: 1;
 }
 
-/* Estilo del cuerpo */
 #committeeModal .modal-body {
     padding: 2rem;
-    text-align: center;
+    background-color: #f9f9f9;
 }
 
-#committeeModal #committeeImage {
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+#committeeModal img#committeeImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
-#committeeModal #committeeTitle {
-    font-size: 1.75rem;
-    font-weight: bold;
+#committeeModal .directors {
+    font-size: 1.1rem;
     color: #1b5e20;
-    text-align: center;
 }
 
-#committeeModal #committeeTheme {
+#committeeModal .theme {
     font-size: 1rem;
-    line-height: 1.8;
-    color: #6c757d; /* Texto gris */
-    text-align: center;
+    color: #6c757d;
+    font-style: italic;
 }
 
-/* Detalles adicionales (director y tipo) */
-#committeeModal p {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    color: #343a40;
-    text-align: center;
-}
-
-#committeeModal p strong {
-    color: #1b5e20; /* Texto verde */
-}
-
-/* Botón de descarga */
-#committeeModal #downloadGuide {
+#committeeModal a#downloadGuide {
+    display: inline-block; /* Asegura que respete márgenes */
     background-color: #1b5e20;
-    border: none;
     border-radius: 20px;
+    padding: 0.1rem 2rem;
+    color: #fff;
+    text-decoration: none;
     font-size: 1rem;
-    padding: 0.6rem 1.5rem;
-    line-height: 1.8;
+    margin-top: 1.5rem; /* Añade separación superior */
+    margin-bottom: 1.5rem; /* Añade separación inferior */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#committeeModal #downloadGuide:hover {
-    background-color: #146414;
-    transform: scale(1.05);
-}
-
-/* Estilo del pie del modal */
-#committeeModal .modal-footer {
-    background-color: #f8f9fa; /* Fondo claro */
-    border-top: none;
-    border-radius: 0 0 12px 12px;
-    display: flex;
-    justify-content: flex-end; /* Alinear Close a la derecha */
-    padding: 1rem 2rem;
-}
-
-#committeeModal .modal-footer .btn {
-    border-radius: 20px;
-    font-size: 1rem;
-    padding: 0.6rem 1.5rem;
-    line-height: 1.2;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-#committeeModal .modal-footer .btn-secondary {
-    background-color: #6c757d;
-    border: none;
-}
-
-#committeeModal .modal-footer .btn-secondary:hover {
-    background-color: #5a6268;
-    transform: scale(1.05);
+#committeeModal a#downloadGuide:hover {
+    background-color: #155d1a; /* Efecto hover */
+    transform: translateY(-2px); /* Sutil movimiento hacia arriba al pasar el cursor */
 }
